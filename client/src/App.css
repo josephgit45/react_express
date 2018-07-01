@@ -1,3 +1,30 @@
 .App {
   text-align: center;
 }
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #38B0DE;
+}
+h1#mainHeader{
+  font-family: 'Shrikhand', cursive;
+  font-size: 6vw;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  font-weight: 50;
+}
+
+div.postRow{
+  background-color: floralwhite;
+  padding: 20px;
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  border-bottom:solid #38B0DE 7px;
+}
+
+img.userImage{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  float: left;
+}
