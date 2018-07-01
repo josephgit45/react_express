@@ -26,11 +26,11 @@ class App extends Component {
       self.setState({venmoPosts});
     }
 
-    addPost("Joseph-Lee-44", "06-28-2018", "yo i wanna give a shoutout to my boy fred", ".10", "https://media.istockphoto.com/photos/red-apple-picture-id495878092?k=6&m=495878092&s=612x612&w=0&h=q9k5jN-1giBGZgTM6QhyKkPqtGf6vRpkgDzAwEz9DkY=");
-    addPost("Josh-Lee-we", "06-28-2018", "yo i wanna give a shoutout to my boy fred", ".10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmZvlOjc6450J56KEHL83Qs8JUYhbddubOJAQaLO5InXD0PddLw");
-    addPost("Jessica-Lee-we", "06-28-2018", "yo i wanna give a shoutout to my boy fred", ".10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmZvlOjc6450J56KEHL83Qs8JUYhbddubOJAQaLO5InXD0PddLw");
-    addPost("Yicheng-Lee-we", "06-28-2018", "yo i wanna give a shoutout to my boy fred", ".10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmZvlOjc6450J56KEHL83Qs8JUYhbddubOJAQaLO5InXD0PddLw");
-    addPost("Meiyuan-Lee-we", "06-28-2018", "yo i wanna give a shoutout to my boy fred", ".10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmZvlOjc6450J56KEHL83Qs8JUYhbddubOJAQaLO5InXD0PddLw");
+    addPost("Sample User 1", "06-28-2018", "yo i wanna give a shoutout to my boy fred", ".10", "https://media.istockphoto.com/photos/red-apple-picture-id495878092?k=6&m=495878092&s=612x612&w=0&h=q9k5jN-1giBGZgTM6QhyKkPqtGf6vRpkgDzAwEz9DkY=");
+    addPost("Sample User 2", "06-28-2018", "yo i wanna give a shoutout to my boy tom", ".10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmZvlOjc6450J56KEHL83Qs8JUYhbddubOJAQaLO5InXD0PddLw");
+    addPost("Sample User 3", "06-28-2018", "yo i wanna give a shoutout to my boy cam", ".10", "https://icdn3.digitaltrends.com/image/walmart-cyber-monday-720x720.jpg?ver=1.jpg");
+    addPost("Sample User 4", "06-28-2018", "yo i wanna give a shoutout to my boy tim", ".10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmZvlOjc6450J56KEHL83Qs8JUYhbddubOJAQaLO5InXD0PddLw");
+    addPost("Sample User 5", "06-28-2018", "yo i wanna give a shoutout to my boy mike", ".10", "https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg");
 
 
     var webSocket = this.state.webSocket;
@@ -41,7 +41,7 @@ class App extends Component {
     webSocket.onmessage = function(event){
       console.log(event.data);
       var venmoPosts = this.state.venmoPosts;
-      venmoPosts.push(JSON.parse(event.data));
+      venmoPosts.unshift(JSON.parse(event.data));
       this.setState({venmoPosts});
     }.bind(this);
 
