@@ -7,7 +7,7 @@ class App extends Component {
     super();
     this.state = {
       venmoPosts: [],
-      webSocket: new WebSocket('ws://localhost:8001')
+      webSocket: new WebSocket('ws://159.89.144.153:8001')
     }
   }
 

@@ -12,7 +12,7 @@ class Posts extends Component {
         });
     }
     return (
-      <div className="Posts">
+      <div className="posts">
         {posts}
       </div>
     );
