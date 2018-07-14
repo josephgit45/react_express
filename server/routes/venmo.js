@@ -12,11 +12,12 @@ router.get('/allPosts', function (req, res) {
 router.post('/request', function (req, res) {
     if (req){
         var parsedData = {};
-        parsedData.username = req.body.data.target.user.username;
+        parsedData.username = req.body.data.actor.username;
         parsedData.dateCreated = req.body.data.date_created;
         parsedData.note = req.body.data.note;
         parsedData.amount = req.body.data.amount;
-        parsedData.url = req.body.data.target.user.profile_picture_url;
+        parsedData.url = req.body.data.actor.profile_picture_url;
+
 
         console.log("POST received: " + JSON.stringify(parsedData, null, 2));
         savedPosts.push(parsedData);
