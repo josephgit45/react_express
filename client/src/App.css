@@ -21,7 +21,7 @@ div.posts{
 div.postRow{
   background-color: floralwhite;
   padding: 20px;
-  width: 40vw;
+  width: 30vw;
   height: 100px;
   margin-left: 7px;
   border-bottom:solid #38B0DE 7px;
@@ -30,7 +30,7 @@ div.postRow{
 
 @media only screen and (max-width: 600px) {
   div.postRow{
-    width: 90%;
+    width: 80%;
   }
 }
 
